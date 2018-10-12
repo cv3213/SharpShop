@@ -14,9 +14,13 @@ import Tap from './Tap';
 const { width, height } = Dimensions.get('window');
 
 export default class MainScreen extends Component {
-  componentWillMount() {
+  componentDidMount() {
     StatusBar.setHidden(false);
   }
+  componentWillUnmount() {
+    StatusBar.setHidden(true);
+  }
+
   static navigationOptions = {
     header: null,
   };

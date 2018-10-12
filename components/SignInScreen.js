@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
   logo: {
     width: 120,
     height: 160,
-    marginLeft: 125,
-    marginTop: 20,
+    marginLeft: 120,
+    marginTop: 10,
   },
   signInBack: {
     backgroundColor: '#FF7563',
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     paddingLeft: 80,
     paddingTop: 5,
     paddingBottom: 5,
-    marginTop: 85,
+    marginTop: 55,
     marginLeft: 48,
     borderWidth: 1,
     borderRadius: 20,

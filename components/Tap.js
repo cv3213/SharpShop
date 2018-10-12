@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 export default class Tap extends Component {
   constructor(props) {
@@ -8,10 +8,15 @@ export default class Tap extends Component {
   }
 
   render() {
-    return (
-      <View>
-        <Text> Tap </Text>
-      </View>
-    );
+    return <View style={styles.tapView} />;
   }
 }
+
+const styles = StyleSheet.create({
+  tapView: {
+    backgroundColor: 'white',
+    borderTopWidth: StyleSheet.hairlineWidth,
+    borderTopColor: 'gray',
+    height: 50,
+  },
+});

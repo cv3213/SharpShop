@@ -19,13 +19,13 @@ export default class MenuBar extends Component {
   render() {
     return (
       <View style={styles.topMenu}>
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.hairlineRight}>
           <Image source={this.state.imageMenu} style={styles.imageMenu} />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.hairlineSide}>
           <Image source={this.state.imageSharp} style={styles.imageSharp} />
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity style={styles.hairlineLeft}>
           <Image source={this.state.imageProfile} style={styles.imageProfile} />
         </TouchableOpacity>
       </View>
@@ -36,28 +36,46 @@ const styles = StyleSheet.create({
   topMenu: {
     flex: 1,
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
     alignItems: 'center',
     backgroundColor: 'white',
-    height: height - 250,
+    height: 100,
+    borderBottomColor: 'gray',
+    borderBottomWidth: StyleSheet.hairlineWidth,
   },
   imageMenu: {
     flex: 1,
     width: 50,
     height: 50,
-    marginRight: 52,
+    marginRight: 25,
+    marginLeft: 25,
   },
   imageSharp: {
     flex: 1,
-    width: 50,
+    width: 65,
     height: 50,
-    marginLeft: 52,
-    marginRight: 52,
+    marginLeft: 40,
+    marginRight: 40,
   },
   imageProfile: {
     flex: 1,
-    width: 50,
+    width: 65,
     height: 50,
-    marginLeft: 52,
+    marginLeft: 25,
+    marginRight: 25,
+  },
+  hairlineLeft: {
+    borderLeftWidth: StyleSheet.hairlineWidth,
+    borderLeftColor: 'gray',
+  },
+  hairlineRight: {
+    borderRightWidth: StyleSheet.hairlineWidth,
+    borderRightColor: 'gray',
+  },
+  hairlineSide: {
+    borderRightWidth: StyleSheet.hairlineWidth,
+    borderRightColor: 'gray',
+    borderLeftWidth: StyleSheet.hairlineWidth,
+    borderLeftColor: 'gray',
   },
 });
