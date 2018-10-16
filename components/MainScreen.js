@@ -26,11 +26,12 @@ export default class MainScreen extends Component {
   };
 
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={{ flex: 1 }}>
-        <MenuBar />
-        <Feed />
-        <Tap />
+        <MenuBar navigate={navigate} />
+        <Feed navigate={navigate} />
+        <Tap navigate={navigate} />
       </View>
     );
   }

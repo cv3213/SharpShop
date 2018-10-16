@@ -52,7 +52,7 @@ export default class SignIn extends Component {
           />
           <TouchableOpacity onPress={() => navigate('Main')}>
             <View>
-              <Text style={styles.signin}>sign in</Text>
+              <Text style={styles.signIn}>sign in</Text>
             </View>
           </TouchableOpacity>
 
@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderColor: '#FFFF',
   },
-  signin: {
+  signIn: {
     fontSize: 30,
     fontWeight: '300',
     color: '#FFF',

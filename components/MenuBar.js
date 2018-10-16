@@ -17,15 +17,24 @@ export default class MenuBar extends Component {
   };
 
   render() {
+    const { navigate } = this.props;
     return (
       <View style={styles.topMenu}>
         <TouchableOpacity style={styles.hairlineRight}>
           <Image source={this.state.imageMenu} style={styles.imageMenu} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.hairlineSide}>
+        <TouchableOpacity
+          style={styles.hairlineSide}
+          onPress={() => {
+            navigate('Sharp');
+          }}>
           <Image source={this.state.imageSharp} style={styles.imageSharp} />
         </TouchableOpacity>
-        <TouchableOpacity style={styles.hairlineLeft}>
+        <TouchableOpacity
+          style={styles.hairlineLeft}
+          onPress={() => {
+            navigate('Profile');
+          }}>
           <Image source={this.state.imageProfile} style={styles.imageProfile} />
         </TouchableOpacity>
       </View>
